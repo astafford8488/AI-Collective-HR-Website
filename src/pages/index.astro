@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to <span class="gradient-text">AI Collective Hampton Roads</span></h1>
+        <p class="hero-subtitle">Building the future of AI in Hampton Roads through collaboration, education, and innovation</p>
+        <div class="hero-actions">
+          <a href="/volunteer" class="btn btn-primary">Get Involved</a>
+          <a href="/events" class="btn btn-secondary">View Events</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Community</h3>
+            <p>Connect with AI enthusiasts, researchers, and professionals in the Hampton Roads area</p>
+          </div>
+          <div class="feature-card">
+            <h3>Education</h3>
+            <p>Learn about AI through workshops, talks, and hands-on projects</p>
+          </div>
+          <div class="feature-card">
+            <h3>Innovation</h3>
+            <p>Collaborate on cutting-edge AI projects and initiatives</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    min-height: calc(100vh - 100px);
+  }
+
+  .hero {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .features {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-surface);
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .feature-card {
+    padding: var(--spacing-lg);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    transition: all 0.3s;
+  }
+
+  .feature-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .feature-card p {
+    color: var(--color-text-light);
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+</style>
