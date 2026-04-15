@@ -60,6 +60,18 @@ import Layout from '../layouts/Layout.astro';
           </ul>
           <a href="https://www.facebook.com/groups/claudecodeforbusiness" target="_blank" rel="noopener" class="btn btn-primary">Join Facebook Group</a>
         </div>
+
+        <div class="card opportunity-card featured-card">
+          <h3>1-on-1 Mentorship</h3>
+          <p>Book a personal session with Ted Patterson at Assembly for hands-on guidance in business, tech, UI/UX, or AI. In-person mentorship tailored to where you are right now.</p>
+          <ul>
+            <li>Business strategy & planning</li>
+            <li>Technology implementation</li>
+            <li>UI/UX design guidance</li>
+            <li>AI tools & workflows</li>
+          </ul>
+          <a href="https://sites.google.com/view/757-1on1-assistance/" target="_blank" rel="noopener" class="btn btn-primary">Book a 1-on-1 Session</a>
+        </div>
       </div>
     </div>
   </section>
@@ -151,6 +163,15 @@ import Layout from '../layouts/Layout.astro';
 
   .email-link:hover {
     text-decoration: underline;
+  }
+
+  .featured-card {
+    border-color: var(--color-secondary);
+    background: linear-gradient(135deg, var(--color-bg-alt), rgba(42, 123, 155, 0.05));
+  }
+
+  .featured-card h3 {
+    color: var(--color-secondary);
   }
 
   @media (max-width: 768px) {
