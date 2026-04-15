@@ -2,114 +2,176 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout>
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Welcome to <span class="gradient-text">AI Collective Hampton Roads</span></h1>
-        <p class="hero-subtitle">Building the future of AI in Hampton Roads through collaboration, education, and innovation</p>
-        <div class="hero-actions">
-          <a href="/volunteer" class="btn btn-primary">Get Involved</a>
-          <a href="/events" class="btn btn-secondary">View Events</a>
-        </div>
+<Layout title="AI Collective Hampton Roads | AI Education & Workforce Development">
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>AI Education & Workforce Development for Hampton Roads</h1>
+      <p class="hero-subtitle">Practitioner-led workshops, trainings, and keynotes that give your team AI skills they can use Monday morning.</p>
+      <div class="hero-actions">
+        <a href="/workshops" class="btn btn-primary">Explore Our Workshops</a>
+        <a href="/connect#booking" class="btn btn-hero-secondary">Book a Discovery Call</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="features">
-      <div class="container">
-        <div class="feature-grid">
-          <div class="feature-card">
-            <h3>Community</h3>
-            <p>Connect with AI enthusiasts, researchers, and professionals in the Hampton Roads area</p>
-          </div>
-          <div class="feature-card">
-            <h3>Education</h3>
-            <p>Learn about AI through workshops, talks, and hands-on projects</p>
-          </div>
-          <div class="feature-card">
-            <h3>Innovation</h3>
-            <p>Collaborate on cutting-edge AI projects and initiatives</p>
-          </div>
+  <section class="stats section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">49</span>
+          <span class="stat-label">Events Delivered in 2025</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">1,000+</span>
+          <span class="stat-label">Total Attendees</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">210K+</span>
+          <span class="stat-label">Global AI Community</span>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <section class="what-we-do section section-alt">
+    <div class="container">
+      <h2 class="section-title">What We Do</h2>
+      <div class="services-grid">
+        <a href="/workshops" class="card service-card">
+          <h3>Workshops & Trainings</h3>
+          <p>Hands-on sessions customized to your industry, tools, and goals. From lunch & learns to full-day bootcamps.</p>
+          <span class="card-link">Learn more &rarr;</span>
+        </a>
+        <a href="/events" class="card service-card">
+          <h3>Keynotes & Speaking</h3>
+          <p>High-impact presentations for leadership offsites, all-hands meetings, and conference stages.</p>
+          <span class="card-link">Learn more &rarr;</span>
+        </a>
+        <a href="/partnerships" class="card service-card">
+          <h3>Partnerships</h3>
+          <p>Ongoing AI education programs embedded in your organization's growth strategy.</p>
+          <span class="card-link">Learn more &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
-  main {
-    min-height: calc(100vh - 100px);
+  .hero {
+    position: relative;
+    background-image: url('/AICHR.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
   }
 
-  .hero {
-    padding: var(--spacing-xl) 0;
-    text-align: center;
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(212, 116, 44, 0.85), rgba(42, 123, 155, 0.75));
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: var(--spacing-2xl) 0;
+    max-width: 760px;
   }
 
   .hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2.75rem;
+    font-weight: 900;
+    color: var(--color-white);
     margin-bottom: var(--spacing-md);
-    line-height: 1.2;
-  }
-
-  .gradient-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    line-height: 1.15;
   }
 
   .hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--color-text-light);
-    max-width: 600px;
-    margin: 0 auto var(--spacing-lg);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.7;
+    max-width: 640px;
   }
 
   .hero-actions {
     display: flex;
     gap: var(--spacing-md);
-    justify-content: center;
     flex-wrap: wrap;
   }
 
-  .features {
-    padding: var(--spacing-xl) 0;
-    background: var(--color-surface);
+  .btn-hero-secondary {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1rem;
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    transition: all 0.2s;
+    text-align: center;
   }
 
-  .feature-grid {
+  .btn-hero-secondary:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+    transform: translateY(-1px);
+  }
+
+  .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .stat-card {
+    padding: var(--spacing-lg);
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-secondary);
+    line-height: 1.1;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    font-weight: 500;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
   }
 
-  .feature-card {
-    padding: var(--spacing-lg);
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    transition: all 0.3s;
+  .service-card {
+    text-decoration: none;
+    display: block;
   }
 
-  .feature-card:hover {
-    border-color: var(--color-primary);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .feature-card h3 {
-    font-size: 1.5rem;
+  .service-card h3 {
     margin-bottom: var(--spacing-sm);
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
   }
 
-  .feature-card p {
-    color: var(--color-text-light);
+  .service-card p {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .card-link {
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
   }
 
   @media (max-width: 768px) {
@@ -118,7 +180,24 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .hero-subtitle {
-      font-size: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-sm);
+    }
+
+    .stat-card {
+      padding: var(--spacing-sm);
+    }
+
+    .stat-number {
+      font-size: 2.25rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>

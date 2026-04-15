@@ -1,7 +1,7 @@
 {
   "name": "ai-collective-hampton-roads",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,7 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/node": "^8.2.3",
     "astro": "^4.3.2"
   },
   "devDependencies": {

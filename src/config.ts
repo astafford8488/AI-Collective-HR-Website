@@ -1,5 +1,5 @@
 export const SITE = {
   title: 'AI Collective Hampton Roads',
-  description: 'Building the future of AI in Hampton Roads',
-  url: 'https://aichamptonroads.org'
+  description: 'AI Education & Workforce Development for Hampton Roads',
+  url: 'https://aicollectivehr.org'
 };

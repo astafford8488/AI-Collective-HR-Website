@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About | AI Collective Hampton Roads">
+  <section class="page-header">
+    <div class="container">
+      <h1>About Us</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="prose">
+        <h2 class="section-title">Who We Are</h2>
+        <p>The AI Collective Hampton Roads is the region's leading AI education and workforce development organization. We deliver customized, practitioner-led training to businesses, universities, and government agencies across Hampton Roads and beyond.</p>
+        <p>Our facilitators bring 25+ years of technology leadership experience — including roles at Amazon and NASA, multiple startup exits, and thousands of hours of hands-on AI instruction. In 2025 alone, we delivered 49 events to over 1,000 attendees, with 70+ events planned for 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">What Sets Us Apart</h2>
+      <div class="apart-grid">
+        <div class="card">
+          <h3>Practitioner-Led</h3>
+          <p>Our facilitators are operators, not academics. Every session is taught by people who build and deploy AI solutions in production environments.</p>
+        </div>
+        <div class="card">
+          <h3>Customized Delivery</h3>
+          <p>Every engagement begins with a discovery process. We learn your industry, your tools, and your goals — then build the session around them. No off-the-shelf decks.</p>
+        </div>
+        <div class="card">
+          <h3>Actionable Outcomes</h3>
+          <p>Attendees leave with tools, frameworks, and workflows they can put to work immediately. Theory stays in the classroom — our sessions are built for the real world.</p>
+        </div>
+        <div class="card">
+          <h3>Global Network, Local Roots</h3>
+          <p>Backed by The AI Collective's 210,000+ member global community with chapters in major tech hubs worldwide, while remaining deeply embedded in Hampton Roads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Backed by The AI Collective</h2>
+      <div class="prose">
+        <p>The AI Collective is a 210,000+ member global nonprofit dedicated to making AI education accessible and actionable. With chapters in major technology hubs worldwide, the organization connects practitioners, researchers, and business leaders to advance responsible AI adoption. AI Collective Hampton Roads is the local chapter serving the greater Hampton Roads region.</p>
+        <a href="https://www.aicollective.com/" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Visit The AI Collective &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Who We Work With</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Audience</th>
+              <th>Examples</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Executive Leadership</strong></td>
+              <td>CEO, CTO, CPO, CFO, Directors, Business Owners</td>
+            </tr>
+            <tr>
+              <td><strong>Technical & Product</strong></td>
+              <td>Engineers, AI Researchers, Product Managers</td>
+            </tr>
+            <tr>
+              <td><strong>Creative & Marketing</strong></td>
+              <td>UX/UI Designers, Content Creators, Writers, Social Media Teams</td>
+            </tr>
+            <tr>
+              <td><strong>Operations & Strategy</strong></td>
+              <td>Project Managers, AI Consultants, Policy Specialists</td>
+            </tr>
+            <tr>
+              <td><strong>Emerging Talent</strong></td>
+              <td>University students from ODU, NSU, CNU, ECPI</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: var(--color-primary);
+    padding: var(--spacing-xl) 0;
+  }
+
+  .page-header h1 {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  .prose {
+    max-width: 800px;
+  }
+
+  .prose p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+  }
+
+  .apart-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .apart-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

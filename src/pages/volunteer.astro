@@ -2,145 +2,114 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Get Involved - AI Collective Hampton Roads">
-  <main>
-    <section class="page-header">
-      <div class="container">
-        <h1>Get <span class="gradient-text">Involved</span></h1>
-        <p class="subtitle">Join our community and help shape the future of AI in Hampton Roads</p>
-      </div>
-    </section>
+<Layout title="Get Involved | AI Collective Hampton Roads">
+  <section class="page-header">
+    <div class="container">
+      <h1>Get Involved</h1>
+      <p class="header-intro">Join our community and help shape the future of AI in Hampton Roads. Whether you want to volunteer, speak, sponsor, or collaborate — there's a place for you.</p>
+    </div>
+  </section>
 
-    <section class="opportunities">
-      <div class="container">
-        <div class="opportunity-grid">
-          <div class="opportunity-card">
-            <h2>Volunteer</h2>
-            <p>Help organize events, mentor newcomers, or contribute to community projects. We welcome volunteers of all skill levels.</p>
-            <ul>
-              <li>Event planning and coordination</li>
-              <li>Content creation and social media</li>
-              <li>Technical mentorship</li>
-              <li>Community outreach</li>
-            </ul>
-            <a href="mailto:volunteer@aichamptonroads.org" class="btn btn-primary">Apply to Volunteer</a>
-          </div>
+  <section class="section">
+    <div class="container">
+      <div class="opportunity-grid">
+        <div class="card opportunity-card">
+          <h3>Volunteer</h3>
+          <p>Help organize events, mentor newcomers, or contribute to community projects. We welcome volunteers of all skill levels.</p>
+          <ul>
+            <li>Event planning and coordination</li>
+            <li>Content creation and social media</li>
+            <li>Technical mentorship</li>
+            <li>Community outreach</li>
+          </ul>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScOjiPZTlrEtYPa23AyvYLa8XvfWQHXhFC3QUde-5FdFkmlcQ/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-primary">Get Involved</a>
+        </div>
 
-          <div class="opportunity-card">
-            <h2>Speak at Events</h2>
-            <p>Share your knowledge and experience with the community through talks, workshops, or panel discussions.</p>
-            <ul>
-              <li>Technical presentations</li>
-              <li>Workshop facilitation</li>
-              <li>Panel discussions</li>
-              <li>Lightning talks</li>
-            </ul>
-            <a href="mailto:speakers@aichamptonroads.org" class="btn btn-primary">Propose a Talk</a>
-          </div>
+        <div class="card opportunity-card">
+          <h3>Speak at Events</h3>
+          <p>Share your knowledge and experience with the community through talks, workshops, or panel discussions.</p>
+          <ul>
+            <li>Technical presentations</li>
+            <li>Workshop facilitation</li>
+            <li>Panel discussions</li>
+            <li>Lightning talks</li>
+          </ul>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSEQNaZ_FK-9b6xtDRysL15ishcfQJnbU5pse7rrg4wZVBpQ/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-primary">Propose a Talk</a>
+        </div>
 
-          <div class="opportunity-card">
-            <h2>Sponsor</h2>
-            <p>Support our mission by sponsoring events, providing venues, or contributing resources to help our community grow.</p>
-            <ul>
-              <li>Event sponsorship</li>
-              <li>Venue hosting</li>
-              <li>Equipment and resources</li>
-              <li>Student scholarships</li>
-            </ul>
-            <a href="mailto:sponsors@aichamptonroads.org" class="btn btn-primary">Become a Sponsor</a>
-          </div>
+        <div class="card opportunity-card">
+          <h3>Sponsor / Partner</h3>
+          <p>Support our mission by sponsoring events, providing venues, or contributing resources to help our community grow.</p>
+          <ul>
+            <li>Event sponsorship</li>
+            <li>Venue hosting</li>
+            <li>Equipment and resources</li>
+            <li>Student scholarships</li>
+          </ul>
+          <a href="/partnerships" class="btn btn-primary">View Partnership Tiers</a>
+        </div>
 
-          <div class="opportunity-card">
-            <h2>Join Projects</h2>
-            <p>Collaborate on community-driven AI projects and initiatives. Learn by doing alongside other AI enthusiasts.</p>
-            <ul>
-              <li>Open source contributions</li>
-              <li>Research collaborations</li>
-              <li>Hackathons and competitions</li>
-              <li>Community challenges</li>
-            </ul>
-            <a href="mailto:projects@aichamptonroads.org" class="btn btn-primary">Explore Projects</a>
-          </div>
+        <div class="card opportunity-card">
+          <h3>Join the Community</h3>
+          <p>Connect with AI enthusiasts, researchers, and professionals in the Hampton Roads area through our online communities.</p>
+          <ul>
+            <li>Attend meetups and events</li>
+            <li>Join our Facebook group</li>
+            <li>Collaborate on projects</li>
+            <li>Network with peers</li>
+          </ul>
+          <a href="https://www.facebook.com/groups/claudecodeforbusiness" target="_blank" rel="noopener" class="btn btn-primary">Join Facebook Group</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="contact">
-      <div class="container">
-        <div class="contact-card">
-          <h2>Questions?</h2>
-          <p>Reach out to us at <a href="mailto:info@aichamptonroads.org" class="email-link">info@aichamptonroads.org</a></p>
-        </div>
+  <section class="section section-alt">
+    <div class="container" style="text-align: center;">
+      <h2 class="section-title">Questions?</h2>
+      <p class="closing-text">Reach out to us at <a href="mailto:andrewstafford@aicollective.com" class="email-link">andrewstafford@aicollective.com</a> or <a href="mailto:ted@aicollective.com" class="email-link">ted@aicollective.com</a></p>
+      <div style="margin-top: var(--spacing-lg);">
+        <a href="/connect#booking" class="btn btn-primary">Book a Discovery Call</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </Layout>
 
 <style>
-  main {
-    min-height: calc(100vh - 100px);
-  }
-
   .page-header {
+    background: var(--color-primary);
     padding: var(--spacing-xl) 0;
-    text-align: center;
-    background: var(--color-surface);
-    border-bottom: 1px solid var(--color-border);
   }
 
   .page-header h1 {
-    font-size: 3rem;
-    font-weight: 800;
+    color: var(--color-white);
+    font-size: 2.5rem;
+    font-weight: 900;
     margin-bottom: var(--spacing-sm);
   }
 
-  .gradient-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .subtitle {
-    font-size: 1.25rem;
-    color: var(--color-text-light);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .opportunities {
-    padding: var(--spacing-xl) 0;
+  .header-intro {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+    max-width: 700px;
+    line-height: 1.7;
   }
 
   .opportunity-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
   }
 
   .opportunity-card {
-    padding: var(--spacing-lg);
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    transition: all 0.3s;
     display: flex;
     flex-direction: column;
   }
 
-  .opportunity-card:hover {
-    border-color: var(--color-primary);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .opportunity-card h2 {
-    font-size: 1.75rem;
-    margin-bottom: var(--spacing-md);
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .opportunity-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
   }
 
   .opportunity-card p {
@@ -152,13 +121,15 @@ import Layout from '../layouts/Layout.astro';
     list-style: none;
     margin-bottom: var(--spacing-lg);
     flex-grow: 1;
+    padding: 0;
   }
 
   .opportunity-card li {
-    padding: var(--spacing-xs) 0;
-    color: var(--color-text-light);
+    padding: 0.375rem 0;
+    color: var(--color-text);
     position: relative;
-    padding-left: var(--spacing-md);
+    padding-left: 1.25rem;
+    font-size: 0.95rem;
   }
 
   .opportunity-card li::before {
@@ -168,41 +139,23 @@ import Layout from '../layouts/Layout.astro';
     color: var(--color-primary);
   }
 
-  .contact {
-    padding: var(--spacing-xl) 0;
-    background: var(--color-surface);
-  }
-
-  .contact-card {
-    text-align: center;
-    padding: var(--spacing-xl);
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-  }
-
-  .contact-card h2 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-md);
+  .closing-text {
+    font-size: 1.15rem;
+    color: var(--color-text);
   }
 
   .email-link {
     color: var(--color-primary);
     font-weight: 600;
-    transition: color 0.3s;
   }
 
   .email-link:hover {
-    color: var(--color-secondary);
+    text-decoration: underline;
   }
 
   @media (max-width: 768px) {
     .page-header h1 {
       font-size: 2rem;
-    }
-
-    .subtitle {
-      font-size: 1rem;
     }
 
     .opportunity-grid {
