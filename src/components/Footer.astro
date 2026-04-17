@@ -1,24 +1,25 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="/AICHR-Logo.png" alt="AI Collective Hampton Roads" class="footer-logo" />
+        <img src={`${base}/AICHR-Logo.png`} alt="AI Collective Hampton Roads" class="footer-logo" />
         <p>&copy; 2026 The AI Collective Hampton Roads</p>
         <p class="footer-parent">Part of <a href="https://www.aicollective.com/" target="_blank" rel="noopener">The AI Collective</a></p>
       </div>
       <div class="footer-links">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/events">Events</a></li>
-          <li><a href="/workshops">Workshops</a></li>
-          <li><a href="/partnerships">Partnerships</a></li>
-          <li><a href="/volunteer">Get Involved</a></li>
-          <li><a href="/connect">Connect</a></li>
+          <li><a href={`${base}/`}>Home</a></li>
+          <li><a href={`${base}/about`}>About</a></li>
+          <li><a href={`${base}/events`}>Events</a></li>
+          <li><a href={`${base}/workshops`}>Workshops</a></li>
+          <li><a href={`${base}/partnerships`}>Partnerships</a></li>
+          <li><a href={`${base}/volunteer`}>Get Involved</a></li>
+          <li><a href={`${base}/connect`}>Connect</a></li>
         </ul>
       </div>
       <div class="footer-social">

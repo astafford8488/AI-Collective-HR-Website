@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="Events | AI Collective Hampton Roads">
@@ -187,7 +188,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="container" style="text-align: center;">
       <h2 class="section-title">Bring an Event to Your Organization</h2>
       <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">We customize every engagement for your team, your industry, and your goals.</p>
-      <a href="/workshops" class="btn btn-primary">View Workshop Packages</a>
+      <a href={`${base}/workshops`} class="btn btn-primary">View Workshop Packages</a>
     </div>
   </section>
 </Layout>

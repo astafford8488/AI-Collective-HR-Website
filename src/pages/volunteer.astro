@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="Get Involved | AI Collective Hampton Roads">
@@ -46,7 +47,7 @@ import Layout from '../layouts/Layout.astro';
             <li>Equipment and resources</li>
             <li>Student scholarships</li>
           </ul>
-          <a href="/partnerships" class="btn btn-primary">View Partnership Tiers</a>
+          <a href={`${base}/partnerships`} class="btn btn-primary">View Partnership Tiers</a>
         </div>
 
         <div class="card opportunity-card">
@@ -81,7 +82,7 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="section-title">Questions?</h2>
       <p class="closing-text">Reach out to us at <a href="mailto:andrewstafford@aicollective.com" class="email-link">andrewstafford@aicollective.com</a> or <a href="mailto:ted@aicollective.com" class="email-link">ted@aicollective.com</a></p>
       <div style="margin-top: var(--spacing-lg);">
-        <a href="/connect#booking" class="btn btn-primary">Book a Discovery Call</a>
+        <a href={`${base}/connect#booking`} class="btn btn-primary">Book a Discovery Call</a>
       </div>
     </div>
   </section>

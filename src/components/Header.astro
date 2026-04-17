@@ -1,5 +1,6 @@
 ---
 const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -15,8 +16,8 @@ const navItems = [
 <header>
   <nav class="container">
     <div class="nav-wrapper">
-      <a href="/" class="logo">
-        <img src="/AICHR-Logo.png" alt="AI Collective Hampton Roads" class="logo-image" />
+      <a href={`${base}/`} class="logo">
+        <img src={`${base}/AICHR-Logo.png`} alt="AI Collective Hampton Roads" class="logo-image" />
       </a>
 
       <button class="mobile-toggle" aria-label="Toggle navigation" id="mobile-toggle">
@@ -26,16 +27,19 @@ const navItems = [
       </button>
 
       <ul class="nav-links" id="nav-links">
-        {navItems.map((item) => (
-          <li>
-            <a
-              href={item.path}
-              class:list={['nav-link', { active: currentPath === item.path || (item.path !== '/' && currentPath.startsWith(item.path)) }]}
-            >
-              {item.name}
-            </a>
-          </li>
-        ))}
+        {navItems.map((item) => {
+          const href = item.path === '/' ? `${base}/` : `${base}${item.path}`;
+          const isActive = item.path === '/'
+            ? currentPath === `${base}/` || currentPath === base || currentPath === '/'
+            : currentPath.startsWith(`${base}${item.path}`);
+          return (
+            <li>
+              <a href={href} class:list={['nav-link', { active: isActive }]}>
+                {item.name}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   </nav>
