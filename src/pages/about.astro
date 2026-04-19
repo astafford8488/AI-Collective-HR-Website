@@ -1,18 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<Layout title="About | AI Collective Hampton Roads">
+<Layout
+  title="About | AI Collective Hampton Roads"
+  description="Meet the operators behind AI Collective Hampton Roads. Practitioner-led AI training backed by 25+ years at Amazon, NASA, and multiple startup exits."
+>
   <section class="page-header">
     <div class="container">
-      <h1>About Us</h1>
+      <span class="eyebrow" style="color: rgba(255,255,255,0.9);">About AIC Hampton Roads</span>
+      <h1 class="display">Operators, not theorists — teaching AI the way it actually gets used.</h1>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <div class="prose">
-        <h2 class="section-title">Who We Are</h2>
+        <span class="section-number">01 — Who We Are</span>
+        <h2 class="section-title">Hampton Roads' practitioner-led AI education chapter.</h2>
         <p>The AI Collective Hampton Roads is the region's leading AI education and workforce development organization. We deliver customized, practitioner-led training to businesses, universities, and government agencies across Hampton Roads and beyond.</p>
         <p>Our facilitators bring 25+ years of technology leadership experience — including roles at Amazon and NASA, multiple startup exits, and thousands of hours of hands-on AI instruction. In 2025 alone, we delivered 49 events to over 1,000 attendees, with 70+ events planned for 2026.</p>
       </div>
@@ -21,7 +27,8 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="section section-alt">
     <div class="container">
-      <h2 class="section-title">What Sets Us Apart</h2>
+      <span class="section-number">02 — What Sets Us Apart</span>
+      <h2 class="section-title">Four things that make our training <em>different.</em></h2>
       <div class="apart-grid">
         <div class="card">
           <h3>Practitioner-Led</h3>
@@ -43,9 +50,20 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <section class="band-teal section testimonial-band">
+    <div class="container">
+      <span class="eyebrow" style="color: rgba(255,255,255,0.85);">In Their Words</span>
+      <blockquote class="pull-quote display">
+        "The 1,000+ attendees we've trained over the past year tell us the same thing: our sessions feel different because the people running them have actually shipped AI in production."
+      </blockquote>
+      <div class="quote-attrib">— The AIC Hampton Roads Team</div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Backed by The AI Collective</h2>
+      <span class="section-number">03 — The Parent Org</span>
+      <h2 class="section-title">Backed by The AI Collective.</h2>
       <div class="prose">
         <p>The AI Collective is a 210,000+ member global nonprofit dedicated to making AI education accessible and actionable. With chapters in major technology hubs worldwide, the organization connects practitioners, researchers, and business leaders to advance responsible AI adoption. AI Collective Hampton Roads is the local chapter serving the greater Hampton Roads region.</p>
         <a href="https://www.aicollective.com/" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Visit The AI Collective &rarr;</a>
@@ -55,7 +73,8 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Who We Work With</h2>
+      <span class="section-number">04 — Who We Work With</span>
+      <h2 class="section-title">From executives to emerging talent.</h2>
       <div class="table-wrapper">
         <table>
           <thead>
@@ -100,8 +119,42 @@ import Layout from '../layouts/Layout.astro';
 
   .page-header h1 {
     color: var(--color-white);
-    font-size: 2.5rem;
-    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    max-width: 860px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--color-secondary);
+  }
+
+  .testimonial-band {
+    padding: calc(var(--spacing-2xl) * 0.8) 0;
+  }
+
+  .pull-quote {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--color-white);
+    max-width: 860px;
+    margin: 0;
+    padding-left: 1.5rem;
+    border-left: 3px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .quote-attrib {
+    margin-top: var(--spacing-md);
+    padding-left: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
   }
 
   .prose {

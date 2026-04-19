@@ -40,6 +40,9 @@ const navItems = [
             </li>
           );
         })}
+        <li class="nav-cta-wrap">
+          <a href={`${base}/connect#booking`} class="nav-cta">Book a Call</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -119,6 +122,29 @@ const navItems = [
   .nav-link.active {
     color: var(--color-primary);
     font-weight: 700;
+  }
+
+  .nav-cta-wrap {
+    margin-left: 0.5rem;
+  }
+
+  .nav-cta {
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    background: linear-gradient(135deg, #D4742C, #E8943A);
+    color: var(--color-white) !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(212, 116, 44, 0.25);
+  }
+
+  .nav-cta:hover {
+    background: linear-gradient(135deg, #B8612A, #D4742C);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212, 116, 44, 0.3);
   }
 
   .mobile-toggle {

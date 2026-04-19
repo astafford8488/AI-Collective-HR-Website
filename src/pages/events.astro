@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
@@ -156,22 +157,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <div class="event-details">
             <div class="resource-grid">
               <a href="https://docs.google.com/document/d/1YdVF4q84xwY6IWD5-amk9ytSMNAKRUVp_pheW2JQuMw/edit?usp=sharing" target="_blank" rel="noopener" class="resource-card">
-                <span class="resource-icon">📋</span>
+                <span class="resource-icon"><Icon name="book-open" size={22} /></span>
                 <span class="resource-label">Homework Guide</span>
                 <span class="resource-desc">Pre-event setup checklist & QR code</span>
               </a>
               <a href="https://docs.google.com/document/d/1K_5Jk3ostqag_hbYUaLdK37riYFgnf4eUFiSh4w4LOY/edit?tab=t.0" target="_blank" rel="noopener" class="resource-card">
-                <span class="resource-icon">🛠️</span>
+                <span class="resource-icon"><Icon name="wrench" size={22} /></span>
                 <span class="resource-label">Demo Setup Guide</span>
                 <span class="resource-desc">Step-by-step environment setup</span>
               </a>
               <a href="https://gamma.app/docs/Claude-Code-From-Setup-to-Agentic-Workflows-4sr9a4vgh0d2wcs?mode=doc" target="_blank" rel="noopener" class="resource-card">
-                <span class="resource-icon">📊</span>
+                <span class="resource-icon"><Icon name="presentation" size={22} /></span>
                 <span class="resource-label">Presentation Slides</span>
                 <span class="resource-desc">Full slide deck from the session</span>
               </a>
               <a href="https://andrewverse2054.gumroad.com/l/xcwoub" target="_blank" rel="noopener" class="resource-card">
-                <span class="resource-icon">🚀</span>
+                <span class="resource-icon"><Icon name="rocket" size={22} /></span>
                 <span class="resource-label">DFY Starter Kit</span>
                 <span class="resource-desc">Done-for-you Claude Code starter pack</span>
               </a>
@@ -376,7 +377,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   .resource-icon {
-    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(212, 116, 44, 0.08);
+    color: var(--color-primary);
+    border-radius: 6px;
     margin-bottom: var(--spacing-xs);
   }
 

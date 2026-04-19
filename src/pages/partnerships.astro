@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
@@ -17,22 +18,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <p class="section-subtitle">Partnerships aren't just financial. We value resources, expertise, and community access.</p>
       <div class="needs-grid">
         <div class="card need-card">
-          <span class="need-icon">🎪</span>
+          <div class="need-icon"><Icon name="calendar" size={28} /></div>
           <h3>Event Logistics & Hospitality</h3>
           <p>Food & beverage sponsorship, signage, photo backdrops, name badges, chapter swag</p>
         </div>
         <div class="card need-card">
-          <span class="need-icon">📣</span>
+          <div class="need-icon"><Icon name="megaphone" size={28} /></div>
           <h3>Visibility & Community Growth</h3>
           <p>Speaker referrals, workshop facilitation, photography, social media amplification, event spaces</p>
         </div>
         <div class="card need-card">
-          <span class="need-icon">💻</span>
+          <div class="need-icon"><Icon name="code" size={28} /></div>
           <h3>Tech Tools & Career Development</h3>
           <p>Tech resource donations, job & internship leads, resume nights, subscriptions or grants</p>
         </div>
         <div class="card need-card">
-          <span class="need-icon">💰</span>
+          <div class="need-icon"><Icon name="wallet" size={28} /></div>
           <h3>Financial Support & Infrastructure</h3>
           <p>Monetary contributions, paid speaker fees, storage & logistics, professional services, grant support</p>
         </div>
@@ -229,9 +230,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   .need-icon {
-    font-size: 2rem;
-    display: block;
-    margin-bottom: var(--spacing-sm);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: rgba(42, 123, 155, 0.1);
+    color: var(--color-secondary);
+    border-radius: 8px;
+    margin: 0 auto var(--spacing-sm);
   }
 
   .need-card h3 {
