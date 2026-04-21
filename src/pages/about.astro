@@ -25,9 +25,39 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
+  <section class="section team-section">
+    <div class="container">
+      <span class="section-number">02 — Meet the Team</span>
+      <h2 class="section-title">The operators behind the sessions.</h2>
+      <p class="section-subtitle">Our core facilitators bring decades of combined experience building, shipping, and teaching AI across enterprise, government, and startup environments.</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src={`${base}/photos/Andrewspeaker.png`} alt="Andrew Stafford" class="team-photo" loading="lazy" />
+          <h3 class="team-name">Andrew Stafford</h3>
+          <div class="team-role">Co-Lead, AIC Hampton Roads</div>
+          <p class="team-bio">Keynote speaker and workshop facilitator focused on practical AI adoption for small and mid-sized businesses. Lead architect behind the chapter's workshop curriculum.</p>
+          <a href="mailto:andrewstafford@aicollective.com" class="team-link">andrewstafford@aicollective.com &rarr;</a>
+        </div>
+        <div class="team-card">
+          <img src={`${base}/photos/Tedspeaker.jpg`} alt="Ted Patterson" class="team-photo" loading="lazy" />
+          <h3 class="team-name">Ted Patterson</h3>
+          <div class="team-role">Co-Lead, AIC Hampton Roads</div>
+          <p class="team-bio">Mid-Atlantic regional director and author. Delivers keynotes, leads 1-on-1 mentorship sessions at Assembly, and runs executive workshops on AI-first business strategy.</p>
+          <a href="https://sites.google.com/view/757-1on1-assistance/" target="_blank" rel="noopener" class="team-link">Book a 1-on-1 Mentorship Session &rarr;</a>
+        </div>
+        <div class="team-card">
+          <img src={`${base}/photos/Erinspeaker.png`} alt="Erin" class="team-photo" loading="lazy" />
+          <h3 class="team-name">Erin</h3>
+          <div class="team-role">Facilitator & Community Lead</div>
+          <p class="team-bio">Workshop facilitator specializing in Vibecoding, web creation, and hands-on AI tooling sessions. Built and maintains the chapter's community platforms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section section-alt">
     <div class="container">
-      <span class="section-number">02 — What Sets Us Apart</span>
+      <span class="section-number">03 — What Sets Us Apart</span>
       <h2 class="section-title">Four things that make our training <em>different.</em></h2>
       <div class="apart-grid">
         <div class="card">
@@ -52,17 +82,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <section class="band-teal section testimonial-band">
     <div class="container">
-      <span class="eyebrow" style="color: rgba(255,255,255,0.85);">In Their Words</span>
+      <span class="eyebrow" style="color: rgba(255,255,255,0.85);">What Attendees Say</span>
       <blockquote class="pull-quote display">
-        "The 1,000+ attendees we've trained over the past year tell us the same thing: our sessions feel different because the people running them have actually shipped AI in production."
+        "Great insight into Claude, integrations, and the orchestration of tasks you can set up. Awesome."
       </blockquote>
-      <div class="quote-attrib">— The AIC Hampton Roads Team</div>
+      <div class="quote-attrib">— Kiran · Claude Code: From Setup to Agentic Workflows · ★★★★★</div>
+      <div class="quote-meta">Independent 5-star review · one of 129 ratings averaging 4.7/5 across our 2025 sessions</div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <span class="section-number">03 — The Parent Org</span>
+      <span class="section-number">04 — The Parent Org</span>
       <h2 class="section-title">Backed by The AI Collective.</h2>
       <div class="prose">
         <p>The AI Collective is a 210,000+ member global nonprofit dedicated to making AI education accessible and actionable. With chapters in major technology hubs worldwide, the organization connects practitioners, researchers, and business leaders to advance responsible AI adoption. AI Collective Hampton Roads is the local chapter serving the greater Hampton Roads region.</p>
@@ -73,7 +104,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <section class="section section-alt">
     <div class="container">
-      <span class="section-number">04 — Who We Work With</span>
+      <span class="section-number">05 — Who We Work With</span>
       <h2 class="section-title">From executives to emerging talent.</h2>
       <div class="table-wrapper">
         <table>
@@ -157,6 +188,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: rgba(255, 255, 255, 0.7);
   }
 
+  .quote-meta {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.55);
+    font-style: italic;
+  }
+
   .prose {
     max-width: 800px;
   }
@@ -174,6 +213,74 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     gap: var(--spacing-lg);
   }
 
+  .team-section .section-subtitle {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .team-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+  }
+
+  .team-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto var(--spacing-md);
+    display: block;
+    border: 4px solid var(--color-bg-alt);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .team-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .team-role {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .team-bio {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.65;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .team-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: inline-block;
+    word-break: break-word;
+  }
+
   .table-wrapper {
     overflow-x: auto;
   }
@@ -185,6 +292,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
     .apart-grid {
       grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .team-photo {
+      width: 130px;
+      height: 130px;
     }
   }
 </style>

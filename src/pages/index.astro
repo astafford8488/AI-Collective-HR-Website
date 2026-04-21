@@ -8,7 +8,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   title="AI Collective Hampton Roads | Practitioner-Led AI Training"
   description="AI workshops taught by operators, not theorists. Facilitators with 25+ years at Amazon, NASA, and multiple startup exits. Serving Hampton Roads businesses, universities, and teams."
 >
-  <section class="hero" style={`background-image: url('${base}/AICHR.png');`}>
+  <section class="hero" style={`background-image: url('${base}/photos/AICbanner1.jpg');`}>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <span class="hero-eyebrow">AI Collective · Hampton Roads Chapter</span>
@@ -19,10 +19,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <a href={`${base}/workshops`} class="btn btn-hero-secondary">Explore Workshop Packages</a>
       </div>
       <div class="hero-chips">
-        <span class="chip">Ex-Amazon</span>
-        <span class="chip">Ex-NASA</span>
-        <span class="chip">Multiple Exits</span>
+        <span class="chip">★ 4.7 / 5 · 129 ratings</span>
         <span class="chip">1,000+ Trained</span>
+        <span class="chip">Ex-Amazon · Ex-NASA</span>
         <span class="chip">49 Events in 2025</span>
       </div>
     </div>
@@ -66,6 +65,24 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
+  <section class="gallery-section">
+    <div class="container">
+      <span class="section-number">In the Rooms</span>
+      <h2 class="section-title">Real events. <em>Real people.</em> Real work.</h2>
+      <p class="section-subtitle">A snapshot of 2025: workshops at Norfolk State, keynotes at Assembly, Vibecoding cohorts, and dozens of sessions across the 757.</p>
+    </div>
+    <div class="gallery-strip">
+      <div class="gallery-row">
+        <img src={`${base}/photos/PXL_20250819_222743676.MP.jpg`} alt="AI workshop in session — attendees working at laptops" loading="lazy" />
+        <img src={`${base}/photos/PXL_20251218_234010977.jpg`} alt="Andrew Stafford delivering a keynote" loading="lazy" />
+        <img src={`${base}/photos/PXL_20251016_232333449.MP.jpg`} alt="Group photo at the AI Collective Hampton Roads" loading="lazy" />
+        <img src={`${base}/photos/IMG_2535.jpg`} alt="AIC team and attendees at a workshop" loading="lazy" />
+        <img src={`${base}/photos/PXL_20251114_010447787.jpg`} alt="Vibecoding 101 cohort celebration" loading="lazy" />
+        <img src={`${base}/photos/1773430366623.jpeg`} alt="Veterans Forge event group photo" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
   <section class="what-we-do section section-alt">
     <div class="container">
       <span class="section-number">01 — What We Do</span>
@@ -102,12 +119,61 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
-  <section class="final-cta section">
+  <section class="testimonials section">
+    <div class="container">
+      <div class="testimonials-header">
+        <div>
+          <span class="section-number">02 — What Attendees Say</span>
+          <h2 class="section-title">Rated <em>4.7 out of 5</em> across 129 reviews.</h2>
+          <p class="section-subtitle">Independently-verified ratings from Luma event attendees across dozens of 2025 sessions.</p>
+        </div>
+        <div class="rating-badge">
+          <div class="rating-score">4.7</div>
+          <div class="rating-stars">★★★★★</div>
+          <div class="rating-count">129 ratings</div>
+        </div>
+      </div>
+
+      <div class="testimonial-grid">
+        <blockquote class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"Great insight into Claude, integrations and the orchestration and the tasks that you can set up. Awesome."</p>
+          <footer class="testimonial-meta">
+            <div class="testimonial-author">Kiran</div>
+            <div class="testimonial-event">Claude Code: From Setup to Agentic Workflows</div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"Great event! I would definitely attend more of these events!"</p>
+          <footer class="testimonial-meta">
+            <div class="testimonial-author">Eric B. Jones</div>
+            <div class="testimonial-event">Black BRAND × AIC: Website Creation Meetup</div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"I loved the class. I got up and running with Mobbin and Bolt — would love even more time to explore the tools."</p>
+          <footer class="testimonial-meta">
+            <div class="testimonial-author">Terri Hargrave-Bradley</div>
+            <div class="testimonial-event">Vibecoding 101: Launch Your Idea Today</div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta section section-alt">
     <div class="container" style="text-align: center;">
-      <span class="section-number" style="display: inline-block;">02 — Next Step</span>
+      <span class="section-number" style="display: inline-block;">03 — Next Step</span>
       <h2 class="section-title" style="margin-left: auto; margin-right: auto; max-width: 720px;">Ready to bring AI into your team? <em>Let's talk.</em></h2>
       <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">A free 30-minute discovery call — we'll learn what your team needs, share what's worked for similar organizations, and figure out if we're a fit.</p>
-      <a href={`${base}/connect#booking`} class="btn btn-primary" style="margin-top: var(--spacing-sm);">Book a Discovery Call</a>
+      <div class="cta-row">
+        <a href={`${base}/connect#booking`} class="btn btn-primary">Book a Discovery Call</a>
+        <a href={`${base}/workshops#menu`} class="btn btn-secondary">Get the Workshop Menu (PDF)</a>
+      </div>
     </div>
   </section>
 </Layout>
@@ -422,5 +488,180 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     .venue-name {
       font-size: 0.85rem;
     }
+
+    .gallery-row {
+      grid-auto-columns: 72vw !important;
+    }
+
+    .testimonials-header {
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+
+    .testimonial-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .cta-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* GALLERY STRIP */
+  .gallery-section {
+    padding: var(--spacing-2xl) 0 var(--spacing-xl);
+    background: var(--color-white);
+    overflow: hidden;
+  }
+
+  .gallery-strip {
+    margin-top: var(--spacing-lg);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    padding: 0 var(--spacing-md) var(--spacing-sm);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(320px, 1fr);
+    gap: var(--spacing-md);
+    padding: 0 calc((100vw - 1200px) / 2);
+  }
+
+  .gallery-row img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-row img:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    background: var(--color-white);
+  }
+
+  .testimonials-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+  }
+
+  .testimonials-header > div:first-child {
+    flex: 1;
+    min-width: 320px;
+  }
+
+  .rating-badge {
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    min-width: 180px;
+  }
+
+  .rating-score {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .rating-stars {
+    color: #E8943A;
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.25rem;
+  }
+
+  .rating-count {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .testimonial-card {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+  }
+
+  .testimonial-stars {
+    color: #E8943A;
+    font-size: 0.95rem;
+    letter-spacing: 0.15em;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .testimonial-quote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+  }
+
+  .testimonial-meta {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-sm);
+  }
+
+  .testimonial-author {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-text);
+  }
+
+  .testimonial-event {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+    margin-top: 0.25rem;
+  }
+
+  /* CTA ROW */
+  .cta-row {
+    display: inline-flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
   }
 </style>

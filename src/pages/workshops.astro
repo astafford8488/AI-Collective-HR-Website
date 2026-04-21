@@ -124,6 +124,33 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
+  <section class="section lead-magnet section-alt" id="menu">
+    <div class="container">
+      <div class="magnet-grid">
+        <div class="magnet-copy">
+          <span class="eyebrow">Not Ready for a Call?</span>
+          <h2 class="section-title">Get the full <em>Workshop Menu</em> (PDF).</h2>
+          <p>Drop your email and we'll send you the complete workshop catalog — every tier, every topic area, every add-on, with real examples of past sessions and what organizations got out of them. Useful as an internal forwarding piece for your team.</p>
+          <ul class="magnet-list">
+            <li>All 3 workshop tiers with full inclusions & pricing</li>
+            <li>Topic menu across 5 subject areas</li>
+            <li>A-la-carte add-ons with pricing</li>
+            <li>Example outcomes from past engagements</li>
+          </ul>
+        </div>
+        <div class="magnet-form">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/YOUR_FORM_ID_HERE"
+            style="width: 100%; height: 420px; border: 0; border-radius: 8px; background: white;"
+            id="workshop-menu-form"
+            title="Workshop Menu Request Form"
+          ></iframe>
+          <p class="form-fallback">If the form doesn't load, email us at <a href="mailto:andrewstafford@aicollective.com">andrewstafford@aicollective.com</a> and we'll send the menu directly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section cta-section">
     <div class="container" style="text-align: center;">
       <p class="closing-text">Multi-session series and custom formats available. Contact us to discuss your needs.</p>
@@ -274,6 +301,61 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     margin-bottom: var(--spacing-lg);
   }
 
+  .section-title em {
+    font-style: italic;
+    color: var(--color-secondary);
+  }
+
+  .magnet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: start;
+  }
+
+  .magnet-copy p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .magnet-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .magnet-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-text);
+  }
+
+  .magnet-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .magnet-form {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .form-fallback {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-top: var(--spacing-sm);
+    text-align: center;
+  }
+
   @media (max-width: 768px) {
     .page-header h1 {
       font-size: 2rem;
@@ -282,6 +364,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     .pricing-grid {
       grid-template-columns: 1fr;
       max-width: 480px;
+    }
+
+    .magnet-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-xl);
     }
   }
 </style>
