@@ -5,31 +5,31 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
-  title="AI Collective Hampton Roads | Practitioner-Led AI Training"
-  description="AI workshops taught by operators, not theorists. Facilitators with 25+ years at Amazon, NASA, and multiple startup exits. Serving Hampton Roads businesses, universities, and teams."
+  title="AI Collective Hampton Roads | A Local Chapter of the Global AI Community"
+  description="A community chapter making AI education accessible across Hampton Roads — free public events, hands-on workshops, and a welcoming space for anyone curious about AI. Part of the 210,000-member global AI Collective."
 >
   <section class="hero" style={`background-image: url('${base}/photos/AICbanner1.jpg');`}>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <span class="hero-eyebrow">AI Collective · Hampton Roads Chapter</span>
-      <h1 class="display">AI workshops taught by <em>operators,</em> not theorists.</h1>
-      <p class="hero-subtitle">Practitioner-led workshops, trainings, and keynotes from facilitators with 25+ years at Amazon, NASA, and multiple startup exits — built to give your team AI skills they can use Monday morning.</p>
+      <h1 class="display">Making AI accessible — <em>one neighbor</em> at a time.</h1>
+      <p class="hero-subtitle">We're the Hampton Roads chapter of The AI Collective — a community of neighbors, practitioners, students, and educators exploring what AI means for our work, our careers, and our region. Most of what we do is free and open to everyone.</p>
       <div class="hero-actions">
-        <a href={`${base}/connect#booking`} class="btn btn-primary">Book a Discovery Call</a>
-        <a href={`${base}/workshops`} class="btn btn-hero-secondary">Explore Workshop Packages</a>
+        <a href={`${base}/events`} class="btn btn-primary">See Upcoming Events</a>
+        <a href={`${base}/volunteer`} class="btn btn-hero-secondary">Get Involved</a>
       </div>
       <div class="hero-chips">
-        <span class="chip">★ 4.7 / 5 · 129 ratings</span>
-        <span class="chip">1,000+ Trained</span>
-        <span class="chip">Ex-Amazon · Ex-NASA</span>
+        <span class="chip">Community-Rated 4.7★</span>
+        <span class="chip">1,000+ Neighbors Welcomed</span>
         <span class="chip">49 Events in 2025</span>
+        <span class="chip">Part of a 210K+ Global Community</span>
       </div>
     </div>
   </section>
 
   <section class="venues-band">
     <div class="container">
-      <p class="venues-label">Trusted across Hampton Roads — delivered at</p>
+      <p class="venues-label">Gathering across Hampton Roads at</p>
       <div class="venues-row">
         <span class="venue-name">Old Dominion University</span>
         <span class="venue-dot">·</span>
@@ -86,25 +86,26 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <section class="what-we-do section section-alt">
     <div class="container">
       <span class="section-number">01 — What We Do</span>
-      <h2 class="section-title">Three ways to bring AI capability <em>into your organization.</em></h2>
+      <h2 class="section-title">A chapter built around <em>three kinds of gatherings.</em></h2>
+      <p class="section-subtitle">Most of our work is free public programming. When teams ask us to bring a session to their organization privately, we're glad to — and the fees help fund everything else we do for the community.</p>
       <div class="services-grid">
+        <a href={`${base}/events`} class="card service-card">
+          <div class="service-icon"><Icon name="users" size={28} /></div>
+          <h3>Free Community Events</h3>
+          <p>Monthly meetups, demo nights, and hands-on workshops open to anyone in the 757 — no cost, no prerequisites, just curiosity.</p>
+          <span class="card-link">See upcoming &rarr;</span>
+        </a>
         <a href={`${base}/workshops`} class="card service-card">
           <div class="service-icon"><Icon name="graduation-cap" size={28} /></div>
-          <h3>Workshops & Trainings</h3>
-          <p>Hands-on sessions customized to your industry, tools, and goals. From lunch & learns to full-day bootcamps.</p>
-          <span class="card-link">Learn more &rarr;</span>
-        </a>
-        <a href={`${base}/events`} class="card service-card">
-          <div class="service-icon"><Icon name="mic" size={28} /></div>
-          <h3>Keynotes & Speaking</h3>
-          <p>High-impact presentations for leadership offsites, all-hands meetings, and conference stages.</p>
-          <span class="card-link">Learn more &rarr;</span>
+          <h3>Private Team Sessions</h3>
+          <p>Sometimes organizations want us to bring a workshop or keynote in-house. We do — and those fees fund the free community programming.</p>
+          <span class="card-link">How it works &rarr;</span>
         </a>
         <a href={`${base}/partnerships`} class="card service-card">
           <div class="service-icon"><Icon name="handshake" size={28} /></div>
-          <h3>Partnerships</h3>
-          <p>Ongoing AI education programs embedded in your organization's growth strategy.</p>
-          <span class="card-link">Learn more &rarr;</span>
+          <h3>Partners & Supporters</h3>
+          <p>Local businesses, universities, and civic partners who host, sponsor, or collaborate with the chapter. Every partner helps us reach more people.</p>
+          <span class="card-link">Join as a partner &rarr;</span>
         </a>
       </div>
     </div>
@@ -112,10 +113,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <section class="differentiator band-teal section">
     <div class="container">
-      <span class="eyebrow" style="color: rgba(255,255,255,0.9);">Why AIC</span>
-      <h2 class="display differentiator-headline">We've been in the rooms where AI <em>actually gets deployed.</em></h2>
-      <p class="differentiator-body">Most AI training is taught by people who read about it. Ours is taught by people who've built it — shipped production systems at Amazon, launched missions at NASA, and led multiple startups from zero to exit. That shows up in every workshop: in the examples we use, the questions we anticipate, and the practical guardrails we teach alongside the capabilities.</p>
-      <a href={`${base}/about`} class="differentiator-link">Learn more about the team &rarr;</a>
+      <span class="eyebrow" style="color: rgba(255,255,255,0.9);">Our Mission</span>
+      <h2 class="display differentiator-headline">AI shouldn't be <em>something that happens to you.</em></h2>
+      <p class="differentiator-body">We started this chapter because we believe everyone in Hampton Roads — from students and career changers to small-business owners and civic leaders — deserves a place to learn about AI from people who've actually used it in the real world. No gatekeeping, no jargon, no pressure to buy anything. Show up, ask questions, meet your neighbors.</p>
+      <a href={`${base}/about`} class="differentiator-link">Read more about the chapter &rarr;</a>
     </div>
   </section>
 
@@ -123,9 +124,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="container">
       <div class="testimonials-header">
         <div>
-          <span class="section-number">02 — What Attendees Say</span>
-          <h2 class="section-title">Rated <em>4.7 out of 5</em> across 129 reviews.</h2>
-          <p class="section-subtitle">Independently-verified ratings from Luma event attendees across dozens of 2025 sessions.</p>
+          <span class="section-number">02 — From Attendees</span>
+          <h2 class="section-title">What people say after they <em>join us.</em></h2>
+          <p class="section-subtitle">Notes from neighbors who've come to our 2025 events. Everyone's welcome — whether it's your first AI meetup or your fiftieth.</p>
         </div>
         <div class="rating-badge">
           <div class="rating-score">4.7</div>
@@ -167,12 +168,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <section class="final-cta section section-alt">
     <div class="container" style="text-align: center;">
-      <span class="section-number" style="display: inline-block;">03 — Next Step</span>
-      <h2 class="section-title" style="margin-left: auto; margin-right: auto; max-width: 720px;">Ready to bring AI into your team? <em>Let's talk.</em></h2>
-      <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">A free 30-minute discovery call — we'll learn what your team needs, share what's worked for similar organizations, and figure out if we're a fit.</p>
+      <span class="section-number" style="display: inline-block;">03 — Get Involved</span>
+      <h2 class="section-title" style="margin-left: auto; margin-right: auto; max-width: 720px;">There's a way in <em>for everyone.</em></h2>
+      <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Come to a meetup. Volunteer with the chapter. Speak at an event. Host us at your space. Or just follow along. Whatever fits your time and interest.</p>
       <div class="cta-row">
-        <a href={`${base}/connect#booking`} class="btn btn-primary">Book a Discovery Call</a>
-        <a href={`${base}/workshops#menu`} class="btn btn-secondary">Get the Workshop Menu (PDF)</a>
+        <a href={`${base}/events`} class="btn btn-primary">Upcoming Events</a>
+        <a href={`${base}/volunteer`} class="btn btn-secondary">Ways to Get Involved</a>
       </div>
     </div>
   </section>
