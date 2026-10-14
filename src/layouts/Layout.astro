@@ -14,7 +14,15 @@ const {
   ogImage = '/og-image.jpg',
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+// The site moved to Chuhching at www.aic757.org (2026-10-14). Every page here
+// forwards to its counterpart there, and search engines get it as canonical.
+const NEW_SITE = 'https://www.aic757.org';
+const MOVED: Record<string, string> = {
+  '': '/', about: '/about', events: '/events', workshops: '/training',
+  partnerships: '/partners', volunteer: '/get-involved', connect: '/get-involved',
+};
+const pageKey = Astro.url.pathname.split('/').filter(Boolean).pop() ?? '';
+const canonicalURL = NEW_SITE + (MOVED[pageKey] ?? '/');
 const ogImageURL = new URL(ogImage, Astro.site).toString();
 ---
 
@@ -25,6 +33,7 @@ const ogImageURL = new URL(ogImage, Astro.site).toString();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    <meta http-equiv="refresh" content={`0; url=${canonicalURL}`} />
     <link rel="icon" type="image/png" href="/AICHR-Logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
