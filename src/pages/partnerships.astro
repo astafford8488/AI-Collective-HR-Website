@@ -2,199 +2,145 @@
 import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const formUrl = 'https://www.chuhching.com/form/ai-collective-hr/partner';
+
+const packages = [
+  {
+    name: 'Annual Partner',
+    price: '$4,999',
+    priceNote: 'per year',
+    items: [
+      'Named chapter partner at every Build and Demo Night and study group for 12 months',
+      'Your logo and link on event listings and event slides',
+      'A thank-you by name from the front of the room at each event',
+      "Post your open roles in the chapter's online community",
+      "First pick of the year's six workshop and hackathon dates",
+    ],
+  },
+  {
+    name: 'Branded Workshop',
+    price: '$5,000',
+    priceNote: '2 for $9,000 · 3 for $12,000',
+    featured: true,
+    items: [
+      'A hands-on AI workshop presented by your company',
+      'We write the curriculum, teach it, and run the room',
+      'Listed on Meetup, Luma, Eventbrite, Facebook, and LinkedIn',
+      'At least 50 attendees, filled through paid ads and the chapter list',
+      'Headcount and photos afterward',
+    ],
+  },
+  {
+    name: 'Campus Hackathon',
+    price: '$20,000',
+    priceNote: 'per event',
+    items: [
+      'A focused build event on a campus or at a venue you host',
+      'One challenge track, designed with you',
+      'We recruit the builders, mentor the teams, and judge the projects',
+      'Your company billed as presenting sponsor',
+      'Every finished project handed to you',
+    ],
+  },
+  {
+    name: 'Full Hackathon',
+    price: '$50,000',
+    priceNote: 'per event',
+    items: [
+      'Several challenge tracks, scoped with your team',
+      'We find the venue, recruit builders from well beyond Hampton Roads, and run every hour of it',
+      'Mentors on the floor and a judging panel you help pick',
+      'Presenting-sponsor billing on everything we publish',
+      'A written report afterward with the winning projects and the people who built them',
+    ],
+  },
+];
 ---
 
-<Layout title="Support the Chapter | AI Collective Hampton Roads">
+<Layout title="Partner With the Chapter | AI Collective Hampton Roads">
   <section class="page-header">
     <div class="container">
-      <h1>Help Us Keep This Open to Everyone</h1>
-      <p class="header-intro">Our chapter runs on community support. Partners — businesses, universities, civic organizations, and individuals — help us keep most of our programming free for neighbors across the 757. Here are the ways people pitch in, from hosting a venue to sponsoring a speaker to backing the chapter financially.</p>
+      <h1>Partner With the Chapter</h1>
+      <p class="header-intro">Every Build and Demo Night and study group we run is free to attend. Partners are the reason it stays that way. Most partners pick one of the packages below. Others host a room, feed a crowd, or send a speaker, and that keeps the lights on too.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Packages and Prices</h2>
+      <p class="section-subtitle">Four fixed packages. We run six workshops and hackathons a year in total, because six is the number we deliver well. Anything past six gets quoted separately, at a higher price.</p>
+      <div class="pricing-grid">
+        {packages.map((p) => (
+          <div class={`pricing-card${p.featured ? ' featured' : ''}`}>
+            <div class="pricing-header">
+              <h3>{p.name}</h3>
+              <div class="price">{p.price}</div>
+              <div class="price-note">{p.priceNote}</div>
+            </div>
+            <div class="pricing-body">
+              <ul>
+                {p.items.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">How Billing Works</h2>
+      <ul class="terms-list">
+        <li>You don't need an annual partnership to book a workshop or a hackathon.</li>
+        <li>We bill by invoice. It's a commercial agreement, not a donation, and chapter events stay free for everyone.</li>
+        <li>We never sell or share attendee data. Sponsors get the headcount, not the guest list.</li>
+        <li>Private training for your own staff, or a smaller room, is a different product. It's covered on our <a href={`${base}/workshops`}>Team Training</a> page.</li>
+      </ul>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <h2 class="section-title">Ways to Support</h2>
-      <p class="section-subtitle">Partnership isn't just financial — resources, expertise, and community access help a lot too.</p>
+      <p class="section-subtitle">Money helps. So does a venue, a speaker, or a stack of job leads for our builders.</p>
       <div class="needs-grid">
         <div class="card need-card">
           <div class="need-icon"><Icon name="calendar" size={28} /></div>
-          <h3>Event Logistics & Hospitality</h3>
-          <p>Food & beverage sponsorship, signage, photo backdrops, name badges, chapter swag</p>
+          <h3>Event Logistics and Hospitality</h3>
+          <p>Food and drinks, signage, photo backdrops, name badges, chapter swag</p>
         </div>
         <div class="card need-card">
           <div class="need-icon"><Icon name="megaphone" size={28} /></div>
-          <h3>Visibility & Community Growth</h3>
-          <p>Speaker referrals, workshop facilitation, photography, social media amplification, event spaces</p>
+          <h3>Visibility and Community Growth</h3>
+          <p>Speaker referrals, workshop facilitation, photography, social amplification, event space</p>
         </div>
         <div class="card need-card">
           <div class="need-icon"><Icon name="code" size={28} /></div>
-          <h3>Tech Tools & Career Development</h3>
-          <p>Tech resource donations, job & internship leads, resume nights, subscriptions or grants</p>
+          <h3>Tech Tools and Career Development</h3>
+          <p>Tool and subscription donations, job and internship leads, resume nights, grants</p>
         </div>
         <div class="card need-card">
           <div class="need-icon"><Icon name="wallet" size={28} /></div>
-          <h3>Financial Support & Infrastructure</h3>
-          <p>Monetary contributions, paid speaker fees, storage & logistics, professional services, grant support</p>
+          <h3>Financial Support and Infrastructure</h3>
+          <p>Paid packages, speaker fees, storage, professional services, grant support</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section-alt">
+  <section class="section section-alt" id="contact">
     <div class="container">
-      <h2 class="section-title">Support Levels</h2>
-      <p class="section-subtitle">For partners who want to contribute at a consistent level, here are the tiers and what each one makes possible. Larger one-time contributions ($250+) that aren't tied to a specific meetup can be spread across months to keep programming running.</p>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Tier</th>
-              <th>Monthly</th>
-              <th>Quarterly</th>
-              <th>Annual</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Silver</strong></td>
-              <td>$250</td>
-              <td>$750</td>
-              <td>$3,000</td>
-            </tr>
-            <tr>
-              <td><strong>Gold</strong></td>
-              <td>$500</td>
-              <td>$1,500</td>
-              <td>$5,750</td>
-            </tr>
-            <tr class="tier-highlight">
-              <td><strong>Platinum</strong></td>
-              <td>$1,000</td>
-              <td>$2,750</td>
-              <td>$11,000</td>
-            </tr>
-            <tr class="tier-highlight">
-              <td><strong>Diamond</strong></td>
-              <td>$3,000</td>
-              <td>$8,500</td>
-              <td>$35,000</td>
-            </tr>
-            <tr class="tier-premium">
-              <td><strong>Global</strong></td>
-              <td>$4,000+</td>
-              <td>$11,000+</td>
-              <td>$45,000+</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="form-grid">
+        <div class="form-copy">
+          <h2 class="section-title">Start the conversation</h2>
+          <p>Pick a package or describe the event you want. One of the chapter leads will write back with dates and next steps.</p>
+        </div>
+        <div class="form-embed">
+          <iframe src={formUrl} title="Partner with AI Collective Hampton Roads" loading="lazy"></iframe>
+          <p class="form-fallback">Form not loading? <a href={formUrl} target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">What Each Tier Includes</h2>
-      <p class="section-subtitle">Benefits scale with tier level. Higher tiers include all benefits from lower tiers.</p>
-
-      <div class="tier-details">
-        <details class="tier-accordion">
-          <summary class="tier-toggle">
-            <span class="tier-badge silver">Silver</span>
-            <span class="tier-summary">Social media recognition & celebration posts</span>
-            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <div class="tier-content">
-            <ul>
-              <li>Celebration posts on LinkedIn, Instagram, and Facebook</li>
-              <li>Social media mentions and tags</li>
-              <li>All Quartz and Bronze benefits included</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="tier-accordion">
-          <summary class="tier-toggle">
-            <span class="tier-badge gold">Gold</span>
-            <span class="tier-summary">In-event exposure, speaking slot & branding</span>
-            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <div class="tier-content">
-            <ul>
-              <li>Host recognition and partner slides at events</li>
-              <li>Emcee call-outs during events</li>
-              <li>Optional 1-minute speaking slot</li>
-              <li>Branding on event materials</li>
-              <li>Instagram & TikTok coverage</li>
-              <li>Everything in Silver</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="tier-accordion" open>
-          <summary class="tier-toggle">
-            <span class="tier-badge platinum">Platinum</span>
-            <span class="tier-summary">Branded workshops, strategy syncs & email call-outs</span>
-            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <div class="tier-content">
-            <ul>
-              <li>Private 30-minute strategy sync with chapter leads</li>
-              <li>Branded workshops: 10–30 attendees, up to 1.5 hours</li>
-              <li>1 keynote, fireside chat, or workshop featured segment</li>
-              <li>Top logo placement on event materials</li>
-              <li>Dedicated highlight posts across all platforms</li>
-              <li>Pre- and post-event email call-outs (mention)</li>
-              <li>Speaking opportunity (1 min+)</li>
-              <li>Everything in Gold</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="tier-accordion">
-          <summary class="tier-toggle">
-            <span class="tier-badge diamond">Diamond</span>
-            <span class="tier-summary">Co-branded events, Demo Nights & full guest list access</span>
-            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <div class="tier-content">
-            <ul>
-              <li>Co-branding across all event materials, website, and emails</li>
-              <li>Larger branded events: 30–60 attendees, up to 2.5 hours</li>
-              <li>Full multi-platform social media coverage</li>
-              <li>Pre- and post-event email blurbs and follow-up inclusion</li>
-              <li>Full guest list access after events</li>
-              <li><strong>Demo Night (AI Innovation Live):</strong> Up to 75 attendees, 1.5 hours, branding on all materials</li>
-              <li>Integrated event access for up to 3 team members</li>
-              <li>Everything in Platinum</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="tier-accordion">
-          <summary class="tier-toggle">
-            <span class="tier-badge global">Global</span>
-            <span class="tier-summary">Reach beyond Hampton Roads into global AI Collective channels</span>
-            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <div class="tier-content">
-            <ul>
-              <li>Visibility beyond Hampton Roads into global AI Collective channels</li>
-              <li>Elevated logo placement at international scale</li>
-              <li>Enriched access to guest lists, partners, and global activations</li>
-              <li>Everything in Diamond</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container" style="text-align: center;">
-      <h2 class="section-title">Interested in supporting the chapter?</h2>
-      <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">We'd love to talk about what fits your organization and what would help the chapter most right now.</p>
-      <a href={`${base}/connect#booking`} class="btn btn-primary">Start a Conversation</a>
     </div>
   </section>
 </Layout>
@@ -217,6 +163,100 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     font-size: 1.125rem;
     max-width: 780px;
     line-height: 1.7;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    align-items: start;
+  }
+
+  .pricing-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+
+  .pricing-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+
+  .pricing-card.featured {
+    border: 2px solid var(--color-primary);
+  }
+
+  .pricing-card.featured .pricing-header {
+    background: linear-gradient(135deg, #D4742C, #E8943A);
+  }
+
+  .pricing-card.featured .pricing-header h3,
+  .pricing-card.featured .pricing-header .price,
+  .pricing-card.featured .pricing-header .price-note {
+    color: var(--color-white);
+  }
+
+  .pricing-header {
+    padding: var(--spacing-lg);
+    background: var(--color-bg-alt);
+    text-align: center;
+  }
+
+  .pricing-header h3 {
+    font-size: 1.35rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .price {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--color-primary);
+  }
+
+  .price-note {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-top: 0.25rem;
+  }
+
+  .pricing-body {
+    padding: var(--spacing-lg);
+  }
+
+  .pricing-body ul,
+  .terms-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .pricing-body ul li,
+  .terms-list li {
+    padding: 0.375rem 0 0.375rem 1.25rem;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    position: relative;
+  }
+
+  .pricing-body ul li::before,
+  .terms-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .terms-list {
+    max-width: 780px;
+  }
+
+  .terms-list li {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .needs-grid {
@@ -251,119 +291,40 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: var(--color-text-light);
   }
 
-  .table-wrapper {
-    overflow-x: auto;
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: var(--spacing-2xl);
+    align-items: start;
   }
 
-  table {
-    width: 100%;
-    max-width: 700px;
+  .form-copy p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--color-text-light);
   }
 
-  .tier-highlight td {
-    background: var(--color-bg-alt);
-    font-weight: 500;
-  }
-
-  .tier-premium td {
-    background: rgba(212, 116, 44, 0.08);
-    font-weight: 600;
-  }
-
-  .tier-details {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-  }
-
-  .tier-accordion {
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    overflow: hidden;
+  .form-embed {
     background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: var(--spacing-sm);
+    box-shadow: var(--shadow-sm);
   }
 
-  .tier-toggle {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md) var(--spacing-lg);
-    cursor: pointer;
-    font-weight: 500;
-    color: var(--color-text);
-    list-style: none;
-    transition: background 0.2s;
+  .form-embed iframe {
+    width: 100%;
+    height: 1240px;
+    border: 0;
+    border-radius: 8px;
+    background: white;
   }
 
-  .tier-toggle::-webkit-details-marker {
-    display: none;
-  }
-
-  .tier-toggle:hover {
-    background: var(--color-bg-alt);
-  }
-
-  .tier-badge {
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.3rem 0.75rem;
-    border-radius: 100px;
-    white-space: nowrap;
-    color: var(--color-white);
-  }
-
-  .tier-badge.silver { background: #8E8E8E; }
-  .tier-badge.gold { background: #C9952B; }
-  .tier-badge.platinum { background: #5B7B8A; }
-  .tier-badge.diamond { background: var(--color-secondary); }
-  .tier-badge.global { background: var(--color-primary); }
-
-  .tier-summary {
-    flex: 1;
-    font-size: 0.95rem;
+  .form-fallback {
+    font-size: 0.85rem;
     color: var(--color-text-light);
-  }
-
-  .chevron {
-    transition: transform 0.2s;
-    flex-shrink: 0;
-    color: var(--color-text-light);
-  }
-
-  details[open] .chevron {
-    transform: rotate(180deg);
-  }
-
-  .tier-content {
-    padding: 0 var(--spacing-lg) var(--spacing-lg);
-  }
-
-  .tier-content ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .tier-content li {
-    padding: 0.5rem 0;
-    font-size: 0.95rem;
-    color: var(--color-text);
-    padding-left: 1.5rem;
-    position: relative;
-    border-bottom: 1px solid var(--color-bg-alt);
-  }
-
-  .tier-content li:last-child {
-    border-bottom: none;
-  }
-
-  .tier-content li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--color-primary);
-    font-weight: 700;
+    margin-top: var(--spacing-sm);
+    text-align: center;
   }
 
   @media (max-width: 768px) {
@@ -371,17 +332,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       font-size: 2rem;
     }
 
-    .needs-grid {
+    .pricing-grid,
+    .needs-grid,
+    .form-grid {
       grid-template-columns: 1fr;
     }
 
-    .tier-toggle {
-      flex-wrap: wrap;
-      gap: var(--spacing-xs);
+    .form-grid {
+      gap: var(--spacing-lg);
     }
 
-    .tier-summary {
-      width: 100%;
+    .form-embed iframe {
+      height: 1340px;
     }
   }
 </style>
